@@ -1,0 +1,59 @@
+\begin{frame}[t]{SVAR-модель Sims--Zha}
+\small
+
+Sims--Zha используют \textbf{структурную VAR-модель}: приведённая VAR описывает динамику данных, а структурная форма нужна для интерпретации шоков.
+
+\vspace{0.35em}
+
+\begin{columns}[T,onlytextwidth]
+
+\begin{column}{0.48\textwidth}
+\textbf{Вектор переменных}
+
+\vspace{0.3em}
+
+\begin{itemize}
+\setlength\itemsep{0.32em}
+\item \textbf{Денежный блок:} $R$ — краткосрочная ставка; $M$ — M2 или совокупные резервы.
+\item \textbf{Реальная экономика:} $y$ — выпуск; $W$ — заработная плата.
+\item \textbf{Цены:} $P_y$ — дефлятор выпуска; $P_{im}$ — цены промежуточных материалов.
+\item \textbf{Информационные переменные:} $Tbk$ — банкротства; $P_{cm}$ — сырьевые цены.
+\end{itemize}
+
+\vspace{0.25em}
+
+\footnotesize
+Идентификация задаётся ограничениями на $\Gamma_0$.
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\textbf{Структурная и приведённая формы}
+
+\vspace{0.25em}
+
+\footnotesize
+
+$$
+\Gamma(L)y_t = \varepsilon_t
+$$
+
+$$
+[I - B(L)]y_t = u_t
+$$
+
+$$
+I - B(L) = \Gamma_0^{-1}\Gamma(L)
+$$
+
+$$
+\Gamma_0 \Sigma_u \Gamma_0' = \Lambda
+$$
+
+\vspace{0.15em}
+
+Здесь $\varepsilon_t$ — структурные шоки, $u_t$ — остатки приведённой VAR, $\Lambda$ — диагональная ковариационная матрица структурных шоков.
+\end{column}
+
+\end{columns}
+
+\end{frame}

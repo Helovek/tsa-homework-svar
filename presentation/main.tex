@@ -1,0 +1,83 @@
+%!TEX TS-program = xelatex
+
+% Заготовка презентации по проекту.
+% Основано на шаблоне presentation/example-beamer-HSE-ru.tex.
+
+\documentclass[aspectratio=169]{beamer}
+
+\newbool{russian}
+\booltrue{russian}
+\usepackage{graphicx}
+\usepackage{HSE-theme/beamerthemeHSE}
+
+%%% Работа с русским языком и шрифтами
+\usepackage[english,russian]{babel}
+\usepackage[no-math]{fontspec}
+\IfFontExistsTF{HSE Sans}{%
+    \setsansfont{HSE Sans}%
+    \setmainfont{HSE Sans}%
+}{%
+    \setsansfont{Arial}%
+    \setmainfont{Arial}%
+}
+\setmonofont{Courier New}
+\usepackage{bookmark}
+\uselanguage{russian}
+\languagepath{russian}
+\deftranslation[to=russian]{Theorem}{Теорема}
+\deftranslation[to=russian]{Definition}{Определение}
+\deftranslation[to=russian]{Definitions}{Определения}
+\deftranslation[to=russian]{Corollary}{Следствие}
+\deftranslation[to=russian]{Fact}{Факт}
+\deftranslation[to=russian]{Example}{Пример}
+\deftranslation[to=russian]{Examples}{Примеры}
+
+%%% Дополнительные пакеты для рабочих слайдов
+\usepackage{booktabs}
+\usepackage{array}
+
+%%% Пути к изображениям
+\graphicspath{{images/}{../figures/output/}{figures/output/}}
+
+%%% Информация об авторе и выступлении
+\title[ДКП и рецессии]{Генерирует ли денежно-кредитная политика рецессии?}
+\subtitle{Структурная идентификация шоков денежно-кредитной политики}
+
+\author[Поздняков М. А.]{Поздняков Михаил Александрович}
+
+\institute{Факультет экономических наук\\НИУ ВШЭ}
+
+\date{Москва, 2026}
+
+\begin{document}
+
+% Заглавный слайд
+\input{sliedes/00_title.tex}
+
+\section{Исходная статья}
+\input{sliedes/01_article_question.tex}
+\input{sliedes/02_puzzles.tex}
+\input{sliedes/03_argumentation.tex}
+\input{sliedes/04_sims_zha_model.tex}
+\input{sliedes/05_article_identification.tex}
+\input{sliedes/06_article_results.tex}
+
+\section{Российская адаптация}
+\input{sliedes/07_russian_transition.tex}
+\input{sliedes/08_russian_variables.tex}
+\input{sliedes/09_data_processing.tex}
+\input{sliedes/10_russian_identification.tex}
+
+\section{Результаты}
+\input{sliedes/11_irf_results.tex}
+\input{sliedes/12_hd_money_policy.tex}
+\input{sliedes/13_hd_prices_output.tex}
+\input{sliedes/14_counterfactuals.tex}
+\input{sliedes/15_conclusion.tex}
+
+
+% Повтор заглавного слайда в конце презентации
+\input{sliedes/00_title.tex}
+
+\input{sliedes/appendix.tex}
+\end{document}

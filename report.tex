@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+
+\input{preamble.tex}
+\usepackage[
+  backend=biber,
+  style=gost-numeric,
+  sorting=none,
+  language=auto,
+  autolang=other
+]{biblatex}
+
+\addbibresource{source/ref.bib}
+
+
+\begin{document}
+\input{latex_sections/title.tex}
+
+\clearpage
+\tableofcontents
+\clearpage
+
+% Введение done
+\input{latex_sections/intro.tex}
+
+% Описание модели статьи done
+\input{latex_sections/specification.tex}
+
+% Адаптация спецификации к российской экономике done
+\input{latex_sections/adaptation.tex}
+
+% Результаты модели done
+\input{latex_sections/results.tex}
+
+% Заключение done
+\input{latex_sections/conclusion.tex}
+
+\newpage
+\printbibliography
+
+\newpage
+\input{latex_sections/appendix.tex}
+
+
+\end{document}

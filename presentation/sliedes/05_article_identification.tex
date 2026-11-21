@@ -1,0 +1,70 @@
+\begin{frame}[t]{Матрица идентификации: M2-модель}
+\footnotesize
+
+Идентификация задаётся ограничениями на матрицу одновременных связей $\Gamma_0$.
+Строки соответствуют уравнениям структурных шоков, столбцы --- текущим переменным.
+
+\vspace{0.35em}
+
+\begin{center}
+\scriptsize
+\setlength{\tabcolsep}{2.8pt}
+\renewcommand{\arraystretch}{1.15}
+
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+Шок / уравнение & $P_{cm}$ & $M$ & $R$ & $P_{im}$ & $P_y$ & $W$ & $y$ & $Tbk$ \tabularnewline
+\midrule
+$P_{cm}$ & 1.91 & -200.87 & -7.98 & -21.05 & -206.11 & 111.96 & -53.87 & -10.91 \tabularnewline
+$MD$     & 0 & 150.23 & 77.94 & 0 & -150.23 & 0 & -150.23 & 0 \tabularnewline
+$MS$     & -11.93 & 10.33 & 182.42 & 0 & 0 & 0 & 0 & 36.95 \tabularnewline
+$P_{im}$ & -24.97 & 0 & 0 & 178.26 & -81.95 & -127.61 & 7.92 & 13.97 \tabularnewline
+$P_y$    & -4.07 & 0 & 0 & 0 & 433.74 & -287.44 & -56.18 & -26.70 \tabularnewline
+$W$      & 1.00 & 0 & 0 & 0 & 0 & -435.81 & 113.33 & -0.04 \tabularnewline
+$y$      & -13.89 & 0 & 0 & 0 & 0 & 0 & 27.30 & -77.19 \tabularnewline
+$Tbk$    & 33.97 & 0 & 0 & 0 & 0 & 0 & 0 & -40.18 \tabularnewline
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.35em}
+
+\footnotesize
+$MD$ --- шок спроса на деньги, $MS$ --- шок денежной политики. В M2-модели уравнение $MS$ допускает текущую реакцию на $Tbk$.
+
+\end{frame}
+
+\begin{frame}[t]{Матрица идентификации: TR-модель}
+\footnotesize
+
+TR-спецификация сохраняет ту же общую структуру ограничений, но меняет уравнение денежной политики.
+
+\vspace{0.35em}
+
+\begin{center}
+\scriptsize
+\setlength{\tabcolsep}{2.8pt}
+\renewcommand{\arraystretch}{1.15}
+
+\begin{tabular}{@{}lrrrrrrrr@{}}
+\toprule
+Шок / уравнение & $P_{cm}$ & $M$ & $R$ & $P_{im}$ & $P_y$ & $W$ & $y$ & $Tbk$ \tabularnewline
+\midrule
+$P_{cm}$ & 13.14 & -6.01 & -49.56 & 30.23 & -67.06 & 156.60 & 30.04 & -66.36 \tabularnewline
+$MD$     & 0 & 25.01 & 124.25 & 0 & -25.01 & 0 & -25.01 & 0 \tabularnewline
+$MS$     & -4.14 & -99.76 & 51.96 & 0 & 0 & 0 & 0 & 0 \tabularnewline
+$P_{im}$ & -26.29 & 0 & 0 & 173.25 & -79.14 & -120.80 & 0.51 & 23.95 \tabularnewline
+$P_y$    & -2.34 & 0 & 0 & 0 & 490.42 & -238.21 & 14.19 & -24.18 \tabularnewline
+$W$      & -6.67 & 0 & 0 & 0 & 0 & 412.96 & -82.62 & 28.65 \tabularnewline
+$y$      & -6.92 & 0 & 0 & 0 & 0 & 0 & 168.90 & 33.61 \tabularnewline
+$Tbk$    & 31.22 & 0 & 0 & 0 & 0 & 0 & 0 & 39.65 \tabularnewline
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{0.35em}
+
+\footnotesize
+Главное отличие от M2-модели: в строке $MS$ коэффициент при $Tbk$ равен нулю, то есть политика не реагирует на банкротства внутри квартала.
+
+\end{frame}
